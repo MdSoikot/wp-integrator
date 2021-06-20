@@ -10,6 +10,7 @@
   --nav-color: #534e4e;
   --btn-outline: #17283f;
   --sidebar-text-color: #4b4b4b;
+  --wp-integrator-primary: #21759b;
 }
 
 * {
@@ -74,7 +75,7 @@ body {
 }
 
 .navbar .button button:nth-child(1) {
-  background-color: #0073aa;
+  background-color: var(--wp-integrator-primary);
 }
 
 .navbar .button button:nth-child(2), .navbar .button button:nth-child(3) {
@@ -422,7 +423,7 @@ input:focus {
 .wp-integrator .feature-heading h3 {
   font-size: 12px;
   text-transform: uppercase;
-  color: #0073aa;
+  color: var(--wp-integrator-primary);
 }
 
 .wp-integrator .feature-desc {
@@ -444,7 +445,7 @@ input:focus {
 }
 
 .bundleDetails h1 {
-  color: #21759b;
+  color: var(--wp-integrator-primary);
   font-family: "Roboto", sans-serif;
 }
 
@@ -483,10 +484,55 @@ input:focus {
 }
 
 .bundleDetails .content {
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
   font-size: 13px;
   color: var(--primary-text-color);
+  line-height: 2;
+}
+
+.bundleDetails .pricing {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.bundleDetails .pricing .item {
+  font-size: 13px;
+}
+
+.bundleDetails .pricing .text {
+  color: var(--sidebar-text-color);
+}
+
+.bundleDetails button {
+  background: transparent;
+  gap: 10px;
+  border: none;
+}
+
+.bundleDetails button:nth-child(1) {
+  background-color: var(--wp-integrator-primary);
+}
+
+.bundleDetails button:nth-child(2) {
+  border: 2px solid var(--wp-integrator-primary);
+  color: var(--primary-text-color);
+}
+
+.bundleDetails button .btn {
+  padding: 8px 30px;
 }
 
 @media (min-width: 1290px) {

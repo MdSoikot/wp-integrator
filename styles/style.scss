@@ -10,6 +10,7 @@
   --nav-color: #534e4e;
   --btn-outline: #17283f;
   --sidebar-text-color: #4b4b4b;
+  --wp-integrator-primary: #21759b;
 }
 
 * {
@@ -33,7 +34,6 @@ body {
 
 .navbar {
   height: 60px;
-  // box-shadow: 0 4px 6px -2px #dfdfdf;
 
   .logo {
     img {
@@ -75,7 +75,7 @@ body {
     button {
       padding: 7px 17px;
       &:nth-child(1) {
-        background-color: #0073aa;
+        background-color: var(--wp-integrator-primary);
       }
       &:nth-child(2),
       &:nth-child(3) {
@@ -301,7 +301,7 @@ input {
     h3 {
       font-size: 12px;
       text-transform: uppercase;
-      color: #0073aa;
+      color: var(--wp-integrator-primary);
     }
   }
   .feature-desc {
@@ -320,7 +320,7 @@ input {
     gap: 10px;
   }
   h1 {
-    color: #21759b;
+    color: var(--wp-integrator-primary);
     font-family: "Roboto", sans-serif;
   }
   .search-bar {
@@ -350,11 +350,34 @@ input {
     }
   }
   .content {
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
     font-size: 13px;
     color: var(--primary-text-color);
     line-height: 2;
+  }
+  .pricing {
+    @include flex(column, flex-start);
+    align-items: flex-start;
+    .item {
+      font-size: 13px;
+    }
+    .text{
+      color:var(--sidebar-text-color);
+    }
+  }
+  button {
+    background: transparent;
+    gap: 10px;
+    border: none;
+    &:nth-child(1) {
+      background-color: var(--wp-integrator-primary);
+    }
+    &:nth-child(2) {
+      border: 2px solid var(--wp-integrator-primary);
+      color: var(--primary-text-color);
+    }
+    .btn {
+      padding: 8px 30px;
+    }
   }
 }
 

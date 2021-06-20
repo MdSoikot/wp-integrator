@@ -10,7 +10,48 @@ export default function Home() {
     setChecked(prevState => !prevState)
   }
 
+  const sidebar = {
+    'Forms': {
+      'subTag': {
+        'account': {
+        },
+        'analytics': {
 
+        },
+        'data import': {
+
+        },
+        'data migration': {
+
+        },
+ 
+        'notification': {
+        },
+      }
+    },
+    'WooCommerce': {
+      'subTag': {
+        'account & invoicing': {
+
+        },
+        'account & invoicing': {
+
+        },
+        'account & invoicing': {
+
+        },
+        'account & invoicing': {
+
+        },
+        'account & invoicing': {
+
+        },
+        'account & invoicing': {
+
+        }
+      }
+    }
+  }
 
   return (
     <>
@@ -40,141 +81,34 @@ export default function Home() {
               </div>
               <div className="filtered-by mt-5">
                 <h4>FILTER BY TAG</h4>
-                <div className="filter-by-button mt-2 mb-1" onClick={handleCheck}>
-                  <button type="button" className="sidebar-btn">
-                    <div className="checkbox" id="forms" >
-                      <span className="mr-1"><input type="checkbox" checked={checked} /></span><span>Forms</span>
+                {sidebar && Object.keys(sidebar).map((item, indx) => (
+                  <>
+
+                    <div className="filter-by-button mt-2 mb-1" onClick={handleCheck} key={`wp-integrator ${indx + 1.5}`}>
+                      <button type="button" className="sidebar-btn">
+                        <div className="checkbox" id="forms" >
+                          <span className="mr-1"><input type="checkbox" checked={checked} /></span><span>{item}</span>
+                        </div>
+                        <div className="count">
+                          <span>8</span>
+                        </div>
+                      </button>
                     </div>
-                    <div className="count">
-                      <span>8</span>
-                    </div>
-                  </button>
-                </div>
-                {checked ?
-                  <div className="filter-sub-button">
-                    <button type="button" className="sidebar-btn mb-1">
-                      <div className="checkbox">
-                        <span className="mr-1"><input type="checkbox"></input></span><span>Newest</span>
+
+                    {checked && Object.keys(sidebar[item].subTag).map((sub, subIndx) => (
+                      <div className="filter-sub-button" key={`wp-integrator ${subIndx + 2.5}`}>
+                        <button type="button" className="sidebar-btn mb-1">
+                          <div className="checkbox">
+                            <span className="mr-1"><input type="checkbox"></input></span><span>{sub}</span>
+                          </div>
+                          <div className="count">
+                            <span>8</span>
+                          </div>
+                        </button>
                       </div>
-                      <div className="count">
-                        <span>8</span>
-                      </div>
-                    </button>
-
-                    <button type="button" className="sidebar-btn mb-1">
-                      <div className="checkbox">
-                        <span className="mr-1"><input type="checkbox"></input></span><span>Newest</span>
-                      </div>
-                      <div className="count">
-                        <span>8</span>
-                      </div>
-                    </button>
-                    <button type="button" className="sidebar-btn mb-1">
-                      <div className="checkbox">
-                        <span className="mr-1"><input type="checkbox"></input></span><span>Newest</span>
-                      </div>
-                      <div className="count">
-                        <span>8</span>
-                      </div>
-                    </button>
-
-                    <button type="button" className="sidebar-btn mb-1">
-                      <div className="checkbox">
-                        <span className="mr-1"><input type="checkbox"></input></span><span>Newest</span>
-                      </div>
-                      <div className="count">
-                        <span>8</span>
-                      </div>
-                    </button>
-
-                    <button type="button" className="sidebar-btn mb-1">
-                      <div className="checkbox">
-                        <span className="mr-1"><input type="checkbox"></input></span><span>Newest</span>
-                      </div>
-                      <div className="count">
-                        <span>8</span>
-                      </div>
-                    </button>
-
-                    <button type="button" className="sidebar-btn mb-1">
-                      <div className="checkbox">
-                        <span className="mr-1"><input type="checkbox"></input></span><span>Newest</span>
-                      </div>
-                      <div className="count">
-                        <span>8</span>
-                      </div>
-                    </button>
-
-                  </div>
-                  : ""}
-
-                <div className="filter-by-button mt-2 mb-1">
-                  <button type="button" className="sidebar-btn">
-                    <div className="checkbox">
-                      <span className="mr-1"><input type="checkbox"></input></span><span>WooCommerce</span>
-                    </div>
-                    <div className="count">
-                      <span>8</span>
-                    </div>
-                  </button>
-                </div>
-
-                <div className="filter-sub-button">
-                  <button type="button" className="sidebar-btn mb-1">
-                    <div className="checkbox">
-                      <span className="mr-1"><input type="checkbox"></input></span><span>Newest</span>
-                    </div>
-                    <div className="count">
-                      <span>8</span>
-                    </div>
-                  </button>
-
-                  <button type="button" className="sidebar-btn mb-1">
-                    <div className="checkbox">
-                      <span className="mr-1"><input type="checkbox"></input></span><span>Newest</span>
-                    </div>
-                    <div className="count">
-                      <span>8</span>
-                    </div>
-                  </button>
-                  <button type="button" className="sidebar-btn mb-1">
-                    <div className="checkbox">
-                      <span className="mr-1"><input type="checkbox"></input></span><span>Newest</span>
-                    </div>
-                    <div className="count">
-                      <span>8</span>
-                    </div>
-                  </button>
-
-                  <button type="button" className="sidebar-btn mb-1">
-                    <div className="checkbox">
-                      <span className="mr-1"><input type="checkbox"></input></span><span>Newest</span>
-                    </div>
-                    <div className="count">
-                      <span>8</span>
-                    </div>
-                  </button>
-
-                  <button type="button" className="sidebar-btn mb-1">
-                    <div className="checkbox">
-                      <span className="mr-1"><input type="checkbox"></input></span><span>Newest</span>
-                    </div>
-                    <div className="count">
-                      <span>8</span>
-                    </div>
-                  </button>
-
-                  <button type="button" className="sidebar-btn mb-1">
-                    <div className="checkbox">
-                      <span className="mr-1"><input type="checkbox"></input></span><span>Newest</span>
-                    </div>
-                    <div className="count">
-                      <span>8</span>
-                    </div>
-                  </button>
-
-                </div>
-
+                    ))}
+                  </>
+                ))}
               </div>
             </div>
 

@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 
 export default function bundleDetails() {
+ 
     return (
         <>
             <Head>
@@ -17,7 +18,6 @@ export default function bundleDetails() {
 
                 <section className="bundleDetails-intro mt-8">
                     <div className="container grid">
-
                         <div className="image">
                             <Image src='/images/wp_integrator/crm_contactform7.svg' alt="file not found" width={492} height={270}></Image>
                         </div>
@@ -32,16 +32,41 @@ export default function bundleDetails() {
                             <div className="content">
                                 Send WooCommerce order data easily into Zoho. Order data will be sent to your desired object according to the rules you put in place. Purchase a license below & get complete control over how you use your WooCommerce data.
                             </div>
-                            <div className="pricing flex">
-                                <div className="icon">
-
+                            <div className="pricing mt-4">
+                                <div className="item flex">
+                                    <div className="icon flex mr-2">
+                                        <input type="radio" checked></input>
+                                    </div>
+                                    <div className="text">
+                                        Personal - 1 Site ($119.00)
+                                    </div>
                                 </div>
-                                <div className="text">
-                                    Personal - 1 Site ($119.00)
+                                <div className="item flex">
+                                    <div className="icon flex mr-2">
+                                        <input type="radio" checked></input>
+                                    </div>
+                                    <div className="text">
+                                        Personal - 1 Site ($119.00)
+                                    </div>
+                                </div>
+                                <div className="item flex">
+                                    <div className="icon flex mr-2">
+                                        <input type="radio" checked></input>
+                                    </div>
+                                    <div className="text">
+                                        Personal - 1 Site ($119.00)
+                                    </div>
                                 </div>
                             </div>
+                            <button className="flex mt-3">
+                                <button type="button" className="btn ">Buy Now</button>
+                                <button type="button" className="btn btn-outline">View Demo</button>
+                            </button>
                         </div>
                     </div>
+                </section>
+
+                <section className="desc">
 
                 </section>
             </div>
