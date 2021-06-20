@@ -5,11 +5,11 @@ import { useState } from 'react'
 
 
 export default function Home() {
-  const [checked, setChecked] = useState(false)
+  const [checked, setChecked] = useState(true)
   const handleCheck = () => {
-    setChecked(prevState=>!prevState)
+    setChecked(prevState => !prevState)
   }
- 
+
 
 
   return (
@@ -40,10 +40,10 @@ export default function Home() {
               </div>
               <div className="filtered-by mt-5">
                 <h4>FILTER BY TAG</h4>
-                <div className="filter-by-button mt-2 mb-1">
+                <div className="filter-by-button mt-2 mb-1" onClick={handleCheck}>
                   <button type="button" className="sidebar-btn">
-                    <div className="checkbox" id="forms" onChange={handleCheck}>
-                      <span className="mr-1"><input type="checkbox" checked={checked}/></span><span>Forms</span>
+                    <div className="checkbox" id="forms" >
+                      <span className="mr-1"><input type="checkbox" checked={checked} /></span><span>Forms</span>
                     </div>
                     <div className="count">
                       <span>8</span>
