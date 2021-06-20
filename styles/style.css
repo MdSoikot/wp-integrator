@@ -1,0 +1,497 @@
+:root {
+  --primary-text-color: #4f5b6d;
+  --secondary-text-color: #4d4d4d;
+  --red-light: #ef0417;
+  --red-primary: #e30013;
+  --heading-color: #17283f;
+  --heading-color-secondary: #13233c;
+  --btn-blue: #345ac2;
+  --blue-light: #0678ee;
+  --nav-color: #534e4e;
+  --btn-outline: #17283f;
+  --sidebar-text-color: #4b4b4b;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.navbar {
+  height: 60px;
+}
+
+.navbar .logo img {
+  width: 120px;
+  height: 29px;
+}
+
+.navbar .links a {
+  padding: 0px 10px;
+  color: var(--nav-color);
+  font-size: 14px;
+}
+
+.navbar .links .closebtn {
+  display: none;
+}
+
+.navbar .nav-btn a {
+  padding: 4px 30px;
+  border-radius: 8px;
+  border: 1px solid var(--red-primary);
+}
+
+.navbar .nav-btn a:first-child {
+  font-weight: bold;
+  color: #17283f;
+  margin-right: 10px;
+}
+
+.navbar .nav-btn a:last-child {
+  background-color: var(--red-primary);
+  color: #fff;
+}
+
+.navbar .responsive-menu {
+  display: none;
+}
+
+.navbar .button {
+  gap: 10px;
+}
+
+.navbar .button button {
+  padding: 7px 17px;
+}
+
+.navbar .button button:nth-child(1) {
+  background-color: #0073aa;
+}
+
+.navbar .button button:nth-child(2), .navbar .button button:nth-child(3) {
+  border: 1px solid var(--btn-blue);
+  color: #0073aa;
+  font-size: 12px;
+}
+
+.navbar .button button:nth-child(3) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navbar .button img {
+  width: 13px;
+  height: 13px;
+  margin-right: 3px;
+}
+
+input:focus {
+  outline: none;
+}
+
+.top-bar {
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  border-bottom: 1px solid #e8e8e8;
+  padding: 10px 20px;
+}
+
+.top-bar .top-bar-item {
+  -webkit-box-flex: 8;
+      -ms-flex-positive: 8;
+          flex-grow: 8;
+}
+
+.top-bar .logo {
+  margin-top: 2px;
+}
+
+.top-bar .logo img {
+  width: 70px;
+  height: 18px;
+}
+
+.top-bar .links a {
+  padding: 0px 10px;
+  color: var(--nav-color);
+  font-size: 12px;
+}
+
+.top-bar .social-btn .btn {
+  border: 1px solid var(--btn-blue);
+  color: #0073aa;
+  padding: 7px 17px;
+  margin-right: 50px;
+  font-size: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.top-bar .social-btn img {
+  width: 13px;
+  height: 13px;
+  margin-right: 3px;
+}
+
+.wp-integrator p {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  color: var(--primary-text-color);
+  font-size: 16px;
+}
+
+.wp-integrator h1,
+.wp-integrator h2,
+.wp-integrator h3 {
+  font-family: "Poppins", sans-serif;
+  color: var(--heading-color);
+}
+
+.wp-integrator h1 {
+  font-size: 40px;
+  color: var(--heading-color);
+}
+
+.wp-integrator h2 {
+  font-size: 30px;
+}
+
+.wp-integrator h3 {
+  font-size: 25px;
+}
+
+.wp-integrator h4 {
+  font-size: 15px;
+}
+
+.wp-integrator .showcase {
+  height: 190px;
+}
+
+.wp-integrator .showcase .container {
+  background-image: url("../public/images/wp_integrations_showcase_back.svg");
+}
+
+.wp-integrator .showcase-text {
+  width: 500px;
+  margin: auto;
+}
+
+.wp-integrator .main-content .flex {
+  gap: 10px;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.wp-integrator ::-webkit-input-placeholder {
+  font-size: 12px;
+}
+
+.wp-integrator :-ms-input-placeholder {
+  font-size: 12px;
+}
+
+.wp-integrator ::-ms-input-placeholder {
+  font-size: 12px;
+}
+
+.wp-integrator ::placeholder {
+  font-size: 12px;
+}
+
+.wp-integrator .sidebar {
+  width: 210px;
+  font-family: "Roboto", sans-serif;
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
+  background-color: #f5f5f5;
+  height: auto;
+  padding: 20px 15px;
+}
+
+.wp-integrator .integration-list {
+  -webkit-box-flex: 10;
+      -ms-flex-positive: 10;
+          flex-grow: 10;
+}
+
+.wp-integrator .search-bar {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.wp-integrator .search-bar span {
+  position: absolute;
+  left: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.wp-integrator .search-bar input {
+  padding: 10px 25px;
+  border-radius: 20px;
+  border: 1px solid #999;
+  width: 100%;
+}
+
+.wp-integrator .sidebar-btn {
+  display: inline-block;
+  width: 80px;
+  height: 28px;
+  border: none;
+  background-color: white;
+  cursor: pointer;
+  border-radius: 20px;
+  -webkit-box-shadow: 1px 1px 1px #ccc;
+          box-shadow: 1px 1px 1px #ccc;
+  color: var(--sidebar-text-color);
+}
+
+.wp-integrator .sidebar-btn:hover {
+  border: 1px solid var(--blue-light);
+}
+
+.wp-integrator .sort-by-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 15px;
+}
+
+.wp-integrator h4 {
+  font-size: 13px;
+  color: #0073aa;
+}
+
+.wp-integrator .filtered-by .filter-by-button {
+  gap: 5px;
+}
+
+.wp-integrator .filtered-by .filter-by-button .sidebar-btn {
+  width: 100%;
+  height: 35px;
+  text-align: left;
+  padding-left: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: bold;
+}
+
+.wp-integrator .count {
+  height: 20px;
+  width: 20px;
+  background: #e8e8e8;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 100%;
+  margin-right: 6px;
+}
+
+.wp-integrator .checkbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.wp-integrator .filter-sub-button {
+  margin-left: 20px;
+  gap: 5px;
+}
+
+.wp-integrator .filter-sub-button .sidebar-btn {
+  width: 100%;
+  height: 35px;
+  text-align: left;
+  padding-left: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.wp-integrator .package-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+}
+
+.wp-integrator .package-list .card {
+  width: 200px;
+  height: 260px;
+  -webkit-box-flex: 3;
+      -ms-flex-positive: 3;
+          flex-grow: 3;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  padding: 15px;
+  margin: 0;
+}
+
+.wp-integrator .package-list .card:hover {
+  -webkit-box-shadow: 1px 1px 5px #ccc;
+          box-shadow: 1px 1px 5px #ccc;
+}
+
+.wp-integrator .feature-heading {
+  min-height: 30px;
+  font-weight: 600;
+}
+
+.wp-integrator .feature-heading h3 {
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #0073aa;
+}
+
+.wp-integrator .feature-desc {
+  min-height: 50px;
+}
+
+.wp-integrator .feature-desc p {
+  font-size: 12px;
+}
+
+.bundleDetails .container {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.bundleDetails .grid {
+  gap: 10px;
+}
+
+.bundleDetails h1 {
+  color: #21759b;
+  font-family: "Roboto", sans-serif;
+}
+
+.bundleDetails .search-bar {
+  width: 600px;
+  margin: auto;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.bundleDetails .search-bar span {
+  position: absolute;
+  left: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.bundleDetails .search-bar input {
+  padding: 9px 25px;
+  border-radius: 20px;
+  border: 1px solid #999;
+  width: 100%;
+}
+
+.bundleDetails .star h2 {
+  font-size: 12px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  color: var(----sidebar-text-color);
+}
+
+.bundleDetails .content {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  color: var(--primary-text-color);
+}
+
+@media (min-width: 1290px) {
+  .wp-integrator {
+    background: red;
+  }
+}
+/*# sourceMappingURL=style.css.map */
